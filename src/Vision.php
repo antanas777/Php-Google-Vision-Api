@@ -86,9 +86,7 @@ class Vision
      */
     public function getResponseForType($responseType)
     {
-        return $responseType === self::RESPONSE_TYPE_JSON
-            ? $this->visionRequest->getRawResponse()
-            : $this->visionRequest->getAnnotateImageResponse();
+        return $this->visionRequest->getRawResponse();
     }
 
     /**
